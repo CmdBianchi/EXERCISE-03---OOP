@@ -1,9 +1,9 @@
 ﻿using System;
 namespace EXERCISE_03___OOP{
     class Program{
-        //-----> INICIO
+        //-----> START
         ////////////////////////////////////////////////////////////////////////////////////////////
-        static void Main(string[] args){
+        static void Main(string[] args) {
             Student Stdt = new Student();
 
             Console.Write("Digite o Nome do aluno: "); Stdt.Name = Console.ReadLine();
@@ -13,12 +13,17 @@ namespace EXERCISE_03___OOP{
             Stdt.Grade2 = double.Parse(Console.ReadLine());
             Stdt.Grade3 = double.Parse(Console.ReadLine());
             Console.WriteLine("NOTA FINAL= " + Stdt.FinalGrade().ToString("F2"));
-            if (Stdt.Approved()){
+
+            if (Stdt.Approved()) {
                 Console.WriteLine("APROVADO");
             }
-
+            else {
+                Console.WriteLine("REPROVADO");
+                Console.WriteLine("FALTARAM " + Stdt.RemainingGrade().ToString("F2")+ " PONTOS");
+                
+            }
         }
         ////////////////////////////////////////////////////////////////////////////////////////////
-        //-----> FIM
+        //-----> END
     }
 }
